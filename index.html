@@ -64,18 +64,18 @@ async function switchToCustomChain() {
       await window.ethereum.request({
         method: 'wallet_addEthereumChain',
         params: [{
-          chainId: '0x41a6ace',
-          chainName: 'FrameTestnet',
+          chainId: '0x28c60',
+          chainName: 'Katla Testnet',
           nativeCurrency: {
             name: 'ETH',
             symbol: 'ETH',
             decimals: 18,
           },
-          rpcUrls: ['https://rpc.testnet.frame.xyz/http'],
-          blockExplorerUrls: ['https://explorer.testnet.frame.xyz'],
+          rpcUrls: ['https://rpc.katla.taiko.xyz'],
+          blockExplorerUrls: ['https://explorer.katla.taiko.xyz/'],
         }],
       });
-      console.log('Switched to FrameTestnet (Chain 0x41a6ace)');
+      console.log('Switched to Katla Testnet (Chain 0x28c60)');
       // Hide the popup after successfully switching to FrameTestnet
       document.getElementById('popup').style.display = 'none';
       // Add your code to enable website functionality after switching
@@ -89,10 +89,10 @@ async function switchToCustomChain() {
 </script>
 
 <!-- Popup -->
-<button id="popup" onclick="switchToCustomChain()">Switch to FrameTestnet</button>
+<button id="popup" onclick="switchToCustomChain()">Switch to katla Testnet</button>
 
 <!-- Check Button -->
-<button id="checkButton" onclick="checkConnection()">Check Network</button>
+<button id="checkButton" onclick="checkConnection()">Add Katla Network</button>
 
 </body>
 </html>
